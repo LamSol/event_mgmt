@@ -1,33 +1,58 @@
-### event_mgmt
+# Even Management App (Frappe Framework)
 
-Manage events and attendees
+A custom Frappe app built for managing events and attendees with streamlined. Developed as a part of technical Assessment.
 
-### Installation
+## Overview
+**Event Management** is a Frappe-based ERP application to manage events, track attendees, and assigned statuses such as confirmed, Pending or cancelled. Dessigned to demostrate full-stack capability using Frappe's Doctypes, modules, and workspace configuration.
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+---
+## Features
+- Create and manage events with custom Doctypes
+- Add multiple attendees via child table(Attendee)
+- Track each attendee's status
+- Modular structure following Frappe's best practices
+- Custom Workspace setup
+- Role-based permissions
+- Build with Developer Mode enabled
+---
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app event_mgmt
-```
+## Tech Stack
+- **Frappe Framework**
+- **Python**
+- **MariaDB**
+- **Redis**
+- **Node.js** & **Yarn**
+- **Ubuntu WSL**
 
-### Contributing
+  ## Setup Instructions
+  ### Prerequisites:
+  - Linux(Ubuntu, use WSL for window users)
+  - Python 3.12
+  - Node.js
+  - Yarn
+  - Redis
+  - Bench CLI (Frappe)
+ 
+  ### Installation Steps:
+  ```bash
+  # Create bench environment
+  bench init frappe-bench --frappe-branch version-14
+  cd frappe-bench
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+  # Get your custom app
+  git clone http://github.com/LamSol/event_mgmt.git apps/event_mgmt
 
-```bash
-cd apps/event_mgmt
-pre-commit install
-```
+  # Install requirements
+  bench get-app event-mgmt
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+  # Create new site
+  bench new-site events.localhost
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+  # Install the app on site
+  bench --site events.localhost install-app event_mgmt
 
-### License
+  # Start the server
+  bench start
 
-mit
+  Then Open browser: http//events.locahost:8000
+  
