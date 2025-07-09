@@ -1,5 +1,5 @@
 app_name = "event_mgmt"
-app_title = "event_mgmt"
+app_title = "Event Management"
 app_publisher = "Solomon Lamkhothang"
 app_description = "Manage events and attendees"
 app_email = "solomonlamkhothang@gmail.com"
@@ -15,7 +15,7 @@ app_license = "mit"
 # 	{
 # 		"name": "event_mgmt",
 # 		"logo": "/assets/event_mgmt/logo.png",
-# 		"title": "event_mgmt",
+# 		"title": "Event Management",
 # 		"route": "/event_mgmt",
 # 		"has_permission": "event_mgmt.api.permission.has_app_permission"
 # 	}
