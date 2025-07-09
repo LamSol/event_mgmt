@@ -55,4 +55,10 @@ A custom Frappe app built for managing events and attendees with streamlined. De
   bench start
 
   Then Open browser: http//events.locahost:8000
+
+### Author
+Solomon Lamkhothang
+MSc Big Data Analytics
+Contact: solomonlamkhothang@gmail.com
+
   
