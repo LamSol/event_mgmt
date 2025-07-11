@@ -5,6 +5,13 @@ A custom Frappe app built for managing events and attendees with streamlined. De
 ## Overview
 **Event Management** is a Frappe-based ERP application to manage events, track attendees, and assigned statuses such as confirmed, Pending or cancelled. Dessigned to demostrate full-stack capability using Frappe's Doctypes, modules, and workspace configuration.
 
+## Brief Writeup
+### Explaination for the assessment:
+I built an Event Management System using the Frappe Framework as part of the technical assessment. The system includes two custom DocTypes: Event Management and Venue, both designed with clean form layouts, validations, and logical structuring. The Event Management form allows users to enter event details such as name, description, date range, capacity, and the linked venue. The Venue form includes name, address, contact info, coordinates, and venue capacity. I implemented Python-based validations to ensure the event end date is after the start date, venue capacity doesn’t exceed the event capacity, and that fields like email, phone number, and coordinates follow the correct formats. I also customized the list views with relevant filters for both DocTypes to enhance usability through the Frappe Desk.
+
+### Challenges:
+During development, I faced several challenges. First, setting up the Frappe environment from scratch involved configuring WSL, installing all dependencies, fixing permission issues, and updating the /etc/hosts file manually to access the desk. There was also some confusion when creating the Event DocType due to a naming conflict with an existing system DocType, which required renaming to “Event Management.” Another challenge was understanding the structure of Frappe’s file system and linking validations inside the correct Python files for each DocType. I also encountered syntax and indentation errors that caused system crashes and required careful debugging. Despite all this, the project gave me strong hands-on experience with Frappe and helped reinforce both my backend logic and version control workflow.
+
 ---
 ## Features
 - Create and manage events with custom Doctypes
@@ -41,9 +48,6 @@ A custom Frappe app built for managing events and attendees with streamlined. De
 
   # Get your custom app
   git clone http://github.com/LamSol/event_mgmt.git apps/event_mgmt
-
-  # Install requirements
-  bench get-app event-mgmt
 
   # Create new site
   bench new-site events.localhost
